@@ -1,3 +1,5 @@
+//to do - animacja najeżdzania na elemnty listy nie działa
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -91,16 +93,16 @@ const data = [
   const Right = styled.div`
     flex: 1;
   `;
-
+  
   const Works = () => {
-   // const [work, setWork] = useState("Web Design");
+    //const [work, setWork] = useState("Web Design");
     return (
       <Section>
         <Container>
           <Left>
             <List>
               {data.map((item) => (
-                <ListItem key={item}>{item}</ListItem>
+                <ListItem key={item} text={item}>{item} </ListItem>
               ))}
             </List>
           </Left>
@@ -117,5 +119,5 @@ const data = [
       </Section>
     );
   };
-
-export default Works;
+  
+  export default Works;
